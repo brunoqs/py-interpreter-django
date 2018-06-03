@@ -1,8 +1,13 @@
 <form method="post" action="{% url 'index' %}" id="formcode">
 	{% csrf_token %}
 	<textarea name="code" form="formcode">Enter code here...</textarea>
-	<button type="submit">Run
+	<button type="submit">Send
 	</button>
+</form>
+
+<form method="post" action="{% url 'run' %}">
+	{% csrf_token %}
+	<button type="submit">Run</button>
 </form>
 
 <div>
